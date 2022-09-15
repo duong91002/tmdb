@@ -1,0 +1,16 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+p,h1,h2,div,a{
+  font-family: 'Noto Sans', 'Open Sans', sans-serif;
+  color: #fff;
+}
+a{
+  text-decoration: none;
+}
+.App{
+  height: 100vh;
+  background-color: #06121e;
+}

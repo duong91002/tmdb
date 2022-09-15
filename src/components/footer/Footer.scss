@@ -1,0 +1,60 @@
+.panelFooter{
+    min-width: 320px;
+    height: 483px;
+    background-image: url("https://xemphim.fun/static/skin/footer-bg.jpg");
+}
+h3{
+    padding: 60px 0 30px 20px;
+}
+.linkTittle:hover{
+    color: #dcf836 !important;
+}
+li{
+    display: list-item;
+    text-align: -webkit-match-parent;
+    color: #b5b5b5;
+    line-height: 0.7cm;
+}
+ul{
+    list-style-type: circle;
+    padding: 0 60px;
+}
+.copyright{
+    padding-top: 100px;
+    text-align: center;
+}
+@media (max-width:1300px){
+    .panelFooter{
+        height: 580px;
+    }
+}
+@media (max-width:1024px){
+    .panelFooter{
+        height: 600px;
+    }
+}
+@media (max-width:768px){
+    .panelFooter{
+        height: 650px;
+    }
+}
+@media (max-width:660px){
+    .panelFooter{
+        height: 750px;
+    }
+}
+@media (max-width:580px){
+    .panelFooter{
+        height: 850px;
+    }
+}
+@media (max-width:480px){
+    .panelFooter{
+        height: 1100px;
+    }
+}
+@media (max-width:340px){
+    .panelFooter{
+        height: 1200px;
+    }
+}

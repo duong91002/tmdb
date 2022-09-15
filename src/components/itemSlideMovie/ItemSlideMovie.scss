@@ -1,0 +1,38 @@
+.grid-item{
+    margin-bottom: 20px;
+}
+.grid-item:hover{
+    cursor: pointer;
+}
+.imgMovie{
+    width: 100%;
+    height: 380px;
+    aspect-ratio: 9/14;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.textMoive{
+    background-color: #0b1e30;
+    height: 60px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 5px 0 0;
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+}
+@media (max-width:480px){
+    .imgMovie{
+        height: 280px;
+    }
+}
+@media (max-width:320px){
+    .imgMovie{
+        height: 240px;
+    }
+    .textMoive{
+       
+        height: 40px;
+       
+    }
+}

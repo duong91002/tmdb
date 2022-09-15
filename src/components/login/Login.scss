@@ -1,0 +1,74 @@
+.backpanel{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.panelLogin{
+    border-radius: 5px;
+    margin-top: 100px;
+    margin-bottom: 60px;
+    width: 480px;
+    // height: 520px;
+}
+.headerLogin{
+    padding: 20px 0;
+}
+.contentLogin{
+    padding: 20px 20px ;
+}
+.inputLogin{
+    margin-bottom: 20px;
+    max-width: 100%;
+    width: 100%;
+    padding: 20px 20px;
+    border-radius: 5px;
+    border-color: #dbdbdb;
+    color: #363636;
+    font-size: 1.25rem;
+}
+@mixin colorbtn($key) {
+    @if($key==1){
+        background-color: #428bca;
+    }@else{
+        background-color: #cf2122;
+    }
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px
+}
+.btnlogin{
+    @include colorbtn(1);
+}
+.btnlogin:hover{
+    background-color: #428bcab5;
+    cursor: pointer;
+}
+.or{
+    text-align: center;
+    padding: 10px 0;
+}
+.btnGoogle{
+    @include colorbtn(2);
+}
+.btnGoogle:hover{
+    background-color: #cf2121b9;
+    cursor: pointer;
+}
+.footerLogin{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+.rightfooter{
+    color: #428bca ;
+}
+.colorlink {
+    color: #428bca !important;
+}
+.colorlink:hover{
+    color: rgb(220, 248, 54) !important;
+}
+.itemAlert{
+    color: #363636;
+}

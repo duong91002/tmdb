@@ -1,0 +1,109 @@
+.panelWatchMovie{
+    background-color: #0b1e30;
+    width: 100%;
+}
+.headerWatchMovie{
+    height: 60px;
+}
+.video{
+    width: 100%;
+    height: 640px;
+    border: none;
+}
+.contentinformation{
+    width: 100%;
+    padding: 0 60px;
+}
+.panelListTv{
+    width: 100%;
+}
+.headerSeason{
+    padding: 40px 0 10px 10px;
+    border-bottom: 2px solid #fff;
+}
+.panelSeason{
+    padding-top: 5px;
+    grid-template-columns: repeat(18,minmax(0,1fr));
+}
+.itemSeason{
+    background-color: #48c78e;
+    padding: 12px 4px;
+    border-radius: 5px;
+    text-align: center;
+}
+.itemSeason:hover{
+    cursor: pointer;
+    color: #428bca;
+}
+.panelEpisode{
+    padding-top: 5px;
+    padding-bottom: 40px;
+    grid-template-columns: repeat(18,minmax(0,1fr));
+}
+.itemEpisode{
+    background-color: #48c78e;
+    padding: 12px 4px;
+    border-radius: 5px;
+    text-align: center;
+}
+.itemEpisode:hover{
+    cursor: pointer;
+    color: #428bca;
+}
+@media (max-width:1300px){
+    .panelvideo{
+        width: 100%;
+        text-align: center;
+    }
+    .video{
+        width: 100%;
+        height: 480px;
+    }
+    .contentinformation{
+        padding: 0 40px;
+    }
+    .panelSeason{
+        grid-template-columns: repeat(12,minmax(0,1fr));
+    }
+    .panelEpisode{
+        grid-template-columns: repeat(12,minmax(0,1fr));
+    }
+}
+@media (max-width:720px){
+    .video{
+        width: 100%;
+        height: 360px;
+    }
+    .contentinformation{
+        padding: 0 20px;
+    }
+    .panelSeason{
+        grid-template-columns: repeat(8,minmax(0,1fr));
+    }
+    .panelEpisode{
+        grid-template-columns: repeat(8,minmax(0,1fr));
+    }
+}
+@media (max-width:540px){
+    .video{
+        width: 100%;
+        height: 240px;
+    }
+    .contentinformation{
+        padding: 0;
+    }
+    .panelSeason{
+        grid-template-columns: repeat(6,minmax(0,1fr));
+    }
+    .panelEpisode{
+        grid-template-columns: repeat(6,minmax(0,1fr));
+    }
+}
+@media (max-width:360px){
+    .panelSeason{
+        grid-template-columns: repeat(4,minmax(0,1fr));
+    }
+    .panelEpisode{
+        grid-template-columns: repeat(4,minmax(0,1fr));
+    }
+}

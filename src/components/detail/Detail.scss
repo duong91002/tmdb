@@ -1,0 +1,157 @@
+.backgroundWatchTrailer{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    z-index: 2;
+}
+.watchTrailer{
+    width: 60%;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    height: 80%;
+}
+.headerDetail{
+    height: 600px;
+    background-size: cover;
+    background-position: 50% 0;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.headerDetail::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(2,13,24,.75);
+}
+.contentDetail{
+    margin-top: -320px;
+    padding: 48px;
+    width: 100%;
+    display: flex;
+    position: relative;
+}
+.leftDetail{
+    width: 25%;
+    text-align: center;
+}
+.poster{
+    aspect-ratio: 9/14;
+    width: 80%;
+}
+.rightDetail{
+    padding: 20px 0 0 20px;
+    width: 75%;
+}
+.logotmdb{
+    padding: 4px 4px;
+    border-radius: 5px;
+    background-color: #428bca;
+}
+.containerGenre{
+    display: flex;
+}
+.genre{
+    margin-right: 10px;
+    padding: 6px 12px;
+    border-radius: 20px;
+    border: #fff solid 2px;
+}
+.panelaction{
+    display: flex;
+    padding: 10px 0;
+}
+@mixin action($id){
+    padding: 8px 24px;
+    border-radius: 5px;
+    @if($id==1){
+        background-color: #428bca;
+    }@else{
+        background-color: rgb(255, 29, 29);
+    }
+}
+@mixin actionhover($id) {
+    cursor: pointer;
+    @if($id==1){
+        background-color: #428bca80;
+    }@else{
+        background-color: rgba(255, 29, 29, 0.519);
+    }
+}
+.trailer{
+    margin-right: 10px;
+    @include action(1)
+}
+.movie{
+    @include action(2)
+}
+.trailer:hover{
+    @include actionhover(1)
+}
+.movie:hover{
+    @include actionhover(2)
+}
+
+
+@media (max-width:1300px){
+    .rightDetail{
+        padding: 10px 0 0 10px;
+        width: 70%;
+    }.leftDetail{
+        width: 30%;
+    }
+}
+@media (max-width:1024px){
+    .rightDetail{
+        padding: 5px 0 0 5px;
+        width: 65%;
+    }
+    .leftDetail{
+        width: 35%;
+    }
+    .contentDetail{
+        padding: 48px 0;
+    }
+    .watchTrailer{
+        width: 70%;
+        top: 15%;
+        left: 15%;
+        height: 70%;
+    }
+}
+@media (max-width:880px){
+    .watchTrailer{
+        width: 80%;
+        top: 15%;
+        left: 10%;
+        height: 70%;
+    }
+ .contentDetail{
+    display: block;
+    }
+    .rightDetail{
+        width: 100%;
+    }
+    .leftDetail{
+        width: 100%;
+    }.poster{
+        aspect-ratio: 9/14;
+        width: 340px;
+    }.homepage{
+        display: none;
+    }
+}
+@media (max-width:480px){
+    .watchTrailer{
+        width: 90%;
+        top: 20%;
+        left: 5%;
+        height: 60%;
+    }
+    .poster{
+        width: 240px;
+    }
+}
