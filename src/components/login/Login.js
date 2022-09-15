@@ -17,7 +17,7 @@ const Login = () => {
       if (email === "" || password === "") {
         setAlert(true);
       } else {
-        axios.post(`http://localhost/api/index.php`, inputs).then((res) => {
+        axios.post(`${process.env.URL_SEVER}`, inputs).then((res) => {
           if (res.status === 200) {
             window.localStorage.setItem("user", JSON.stringify(res.data));
             alert("Successful login!");
@@ -33,7 +33,7 @@ const Login = () => {
         const re =
           /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if (re.test(email)) {
-          axios.post(`http://localhost/api/index.php`, inputs).then((res) => {
+          axios.post(`${process.env.URL_SEVER}`, inputs).then((res) => {
             if (res.status === 200) {
               window.localStorage.setItem(
                 "user",
