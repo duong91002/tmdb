@@ -1,6 +1,6 @@
 import "./App.css";
 import Container from "./components/container/Container";
-import Footer from "./components/footer/footer";
+import Footer from "./components/footer/Footer";
 function App() {
   return (
     <div className="App">
