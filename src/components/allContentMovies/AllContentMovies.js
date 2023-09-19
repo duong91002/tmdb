@@ -119,21 +119,26 @@ const Movie = () => {
               })}
             </div>
             <div className="panelPage">
-              <Link
-                to={`?page=${parseInt(window.location.search.slice(6)) - 1}`}
-                onChange={() => setUrl(window.location)}
-              >
-                <div
-                  className="itemPage"
-                  onClick={() =>
-                    handleChangePage(
-                      `?page=${parseInt(window.location.search.slice(6)) - 1}`
-                    )
-                  }
+              {window.location.search.slice(6) == 1 ? (
+                ""
+              ) : (
+                <Link
+                  to={`?page=${parseInt(window.location.search.slice(6)) - 1}`}
+                  onChange={() => setUrl(window.location)}
                 >
-                  <i className="fa-solid fa-angle-left"></i>
-                </div>
-              </Link>
+                  <div
+                    className="itemPage"
+                    onClick={() =>
+                      handleChangePage(
+                        `?page=${parseInt(window.location.search.slice(6)) - 1}`
+                      )
+                    }
+                  >
+                    <i className="fa-solid fa-angle-left"></i>
+                  </div>
+                </Link>
+              )}
+
               {pagemax5 ? (
                 <>
                   {arrPage.map((item) => {
@@ -231,21 +236,25 @@ const Movie = () => {
                   {lastpage}
                 </div>
               </Link>
-              <Link
-                to={`?page=${parseInt(window.location.search.slice(6)) + 1}`}
-                onChange={() => setUrl(window.location)}
-              >
-                <div
-                  className="itemPage"
-                  onClick={() =>
-                    handleChangePage(
-                      `?page=${parseInt(window.location.search.slice(6)) + 1}`
-                    )
-                  }
+              {window.location.search.slice(6) == lastpage ? (
+                ""
+              ) : (
+                <Link
+                  to={`?page=${parseInt(window.location.search.slice(6)) + 1}`}
+                  onChange={() => setUrl(window.location)}
                 >
-                  <i className="fa-solid fa-angle-right"></i>
-                </div>
-              </Link>
+                  <div
+                    className="itemPage"
+                    onClick={() =>
+                      handleChangePage(
+                        `?page=${parseInt(window.location.search.slice(6)) + 1}`
+                      )
+                    }
+                  >
+                    <i className="fa-solid fa-angle-right"></i>
+                  </div>
+                </Link>
+              )}
             </div>
           </div>
         </div>
