@@ -37,7 +37,7 @@ const footer = () => {
           <li>
             Có lựa chọn hiện phụ đề song ngữ (tức hiện đồng thời cả tiếng Anh &
             tiếng Việt), phù hợp với những người muốn học tiếng Anh qua phụ đề
-            phim
+            phim.
           </li>
         </ul>
       </div>
