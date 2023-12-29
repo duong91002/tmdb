@@ -3,14 +3,14 @@ import React, { useEffect } from "react";
 const FacebookSDK = () => {
   useEffect(() => {
     window.fbAsyncInit = function () {
-      FB.init({
+      window.FB.init({
         appId: "270210125748769",
         cookie: true,
         xfbml: true,
         version: "v18.0",
       });
 
-      FB.AppEvents.logPageView();
+      window.FB.AppEvents.logPageView();
     };
 
     (function (d, s, id) {
