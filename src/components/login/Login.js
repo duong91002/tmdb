@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.scss";
 import { Button, AlertTitle, Stack, Alert } from "@mui/material";
 import Header from "../header/Header";
+import FacebookLoginButton from "../../FacebookLoginButton";
 const Login = () => {
   const param = window.location.pathname;
   const navigate = useNavigate();
@@ -133,7 +134,7 @@ const Login = () => {
                   )}
 
                   <div className="or">Or</div>
-                  <h3 className="btnGoogle">Login with Google</h3>
+                  <FacebookLoginButton />
                 </div>
               </div>
               <div className="footerLogin">
